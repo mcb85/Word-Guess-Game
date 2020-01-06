@@ -1,86 +1,86 @@
- 
-    /* wins = 0;
-    var guessCount = 0;
-    var correctLetters= 0;*/
-   
-    //Create array of words to be guessed//
-    var Words = ["central perk", "monica", "rachel", "smelly cat", "joey", "ross", "chandler", "phoebe"];
 
-    var CurrentWord = Words[Math.floor(Math.random() * words.length)];
+//Create array of words to be guessed//
+var Words = ["central perk", "monica", "rachel", "smelly cat", "joey", "ross", "chandler", "phoebe"];
+
+var wins = 0;
+var correctLetters = 0;
+var userGuess = [];
+var lettersGuessed = [];
+var remainingLetters=[];
+//generate a random word from array
+var CurrentWord = Words[Math.floor(Math.random() * Words.length)];
+remainingGuesses = CurrentWord.length + 3;
     
-    //create a forloop of letters to be displayed for each letter
-    
-    //display blank spaces where letters go
-    var answerArray = [];
-    for (var i = 0; i <CurrentWord.length; i++) {
-        answerArray[i] = "_";
-    }
 
-//Display # of guesses remaining for user, array length plus 3
-    var remainingGuesses = CurrentWord.length + 3;
-
-    while (remainingGuesses > 0) {
-        document.write(answerArray.join(""));
+    document.onkeyup = function (event) {
+        console.log("Entered on key up function");
+        var userGuess = String.fromCharCode(event.keyCode).
+            toLowerCase();
+        //Define number of guesses remaining
+        remainingGuesses = remainingGuesses-1;
        
-    }
- 
-    
-    
-    //var getRandomWord = function(currentWord) {
-        //return currentWord[Math.floor(Math.random()*currentWord.length)];
-    }
+        console.log("user's guess is: " + userGuess);
+     
 
-    //var RandomWord = getRandomWord(currentWord);
-    //console.log('randomWord', RandomWord);
+        //if (userGuess=== CurrentWord [i]); {
+         //return CurrentWord;
+         //console.log
+     //}
+      
+        console.log(CurrentWord);
+        //display blank spaces where letters go
+        var answerArray = [];
+        for (var i = 0; i < CurrentWord.length; i++) {
+            answerArray[i] = "_";
+        }
+        console.log(answerArray);
 
-    //textform.addEventListener('submit,', function(event) {
-        //event.preventDefault()
+        
+
+        
+        console.log(remainingGuesses);
+        //Whenever a letter from the array is pressed, display on appropriate space in word
+        //new word after user wins or loses
+        
+        //while (remainingGuesses > 0) {
+        //document.getElementById("lettersguessed").innerHTML = answerArray.join(" ");
+        //}
+
+        for (var j = 0; j < CurrentWord.length; j++) {
+            if (CurrentWord[j] === userGuess) {
+                answerArray[j] = userGuess;
+                remainingGuesses--;   
+            }
+        }
+        /*} else {
+        document.write(userGuess);
+        }/*
+
+    document.write(answerArray.join(""));
     }/*
 
 
+ 
+*///needs to match in html file
+        //Display wins on page
+        //Display letters guessed on page
+        //Display current word on page//  */  
 
+        var html = "<p>Current Word:" + answerArray + "</p>" +
+        "<p>Wins:" + wins + "</p>" +
+        "<p>Remaining guesses: " + remainingGuesses + "</p>";
+
+        document.getElementById("current-word").innerHTML = html;
+        console.log("Exited on key up function");
     }
 
 
 
-//create a forloop of words to be displayed
-
-
-//Whenever a letter from the array is pressed, display on appropriate space in word
-    //document.onkeyup = function(event) {
-        //var userGuess =String.fromCharCode(event.keycode).
-            //toUpperCase();
-
-
-
-
-
-
-//letters not on the array to be displayed below in "guessed letters"
 
 
 //create conditional statements
-//if (userGuess)
-
-//Display wins on page
-
-//Define number of guesses allowed
+//Code from
 
 
 //after user wins, display picture of item
-//after user wins/loses, a new word should be automatically displayed for user to play
-
-
-
-}
-
-
-
-/*var html ="<p>Press any key to get started</p>" +
-"<p>currentword:" + currentWord + "</p>"
-"<p>wins:" + wins + "</p>";
-"<p>lettersguessed:" + guessCount + "</p>";
-
-document.querySelector('#game').innerHTML=html;*/
-
-}
+//after user wins/loses, a new word should be automatically displayed for user to play*/}
