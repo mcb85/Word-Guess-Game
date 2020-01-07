@@ -1,0 +1,56 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: red;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+.card{
+    border: none;
+    height: 500px;
+}
+
+h1{
+    font-size: 100px;
+    height: 155px;
+    padding-top: 0;
+    padding-bottom: 0px;
+    margin-top: 0;
+    color: rgb(17, 174, 247);
+}
+
+.col{
+    height: 600px;
+}
+
+.img-thumbnail{
+    margin-top: 0;
+    padding-left: 0;
+    border: none;
+}
+
+.logo {
+    width: fit-content;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-bottom:none;
+    padding-bottom: 0;
+    height: 200px;
+}
+
+.jumbotron {
+    padding-bottom: 0;
+    padding-top: 0;
+    background-color: white;
+    height: 300px;
+}
+
+/*p {
+    height:10px ;
+}*/
+
+#lettersguessed {
+    height: 300px;
+}
