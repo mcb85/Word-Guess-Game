@@ -37,21 +37,21 @@ createBlank();
   //display picture of current word
 function img() {
         if (CurrentWord === Words[0]) {
-            document.getElementById("friends").src = "assets/images/central-perk(grubstreet).jpg";
+            document.getElementById("friends").src = "assets/images/centralperk.jpg";
         } else if (CurrentWord === Words[1]) {
-            document.getElementById("friends").src = "assets/images/Monica_Geller-wikipedia.jpg";
+            document.getElementById("friends").src = "assets/images/Monica.jpg";
         } else if (CurrentWord === Words[2]) {
-            document.getElementById("friends").src = "assets/images/Rachel_Green-wikipedia.jpg";
+            document.getElementById("friends").src = "assets/images/Rachel.jpg";
         } else if (CurrentWord === Words[3]) {
-            document.getElementById("friends").src = "assets/images/smellycatyahoofinance(nbc).jpg";
-        } else if (CurrentWord === [4]) {
-            document.getElementById("friends").src = "assets/images/joeytribbiani-enews.jpg";
-        } else if (CurrentWord === [5]) {
-            document.getElementById("friends").src = "assets/images/ross-buzzfeed.jpg";
-        } else if (CurrentWord === [6]) {
-            document.getElementById("friends").src = "assets/images/Chandler_Bing-wikipedia.png";
-        } else if (CurrentWord === [7]) {
-            document.getElementById("friends").src = "assets/images/Friendsphoebe-wikipedia.jpg";
+            document.getElementById("friends").src = "assets/images/smellycat.jpg";
+        } else if (CurrentWord === Words[4]) {
+            document.getElementById("friends").src = "assets/images/joey.jpg";
+        } else if (CurrentWord === Words[5]) {
+            document.getElementById("friends").src = "assets/images/ross.jpg";
+        } else if (CurrentWord === Words[6]) {
+            document.getElementById("friends").src = "assets/images/ChandlerBing.png";
+        } else if (CurrentWord === Words[7]) {
+            document.getElementById("friends").src = "assets/images/phoebe.jpg";
         }
     };
 
